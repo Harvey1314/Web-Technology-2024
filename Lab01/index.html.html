@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Protest+Guerrilla&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Exploring the World - Travel Adventures</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        color: #424242;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+
+      h1 {
+        color: #424242;
+        text-align: center;
+        padding: 20px;
+        background-color: #48cfcb;
+        font-size: 40px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        background-color: #424242;
+        color: #f5f5f5;
+        padding: 50px;
+      }
+
+      header h2 {
+        text-align: center;
+        font-size: 40px;
+        font-family: "Edu AU VIC WA NT Guides", cursive;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        color: #f5f5f5;
+      }
+
+      header p {
+        font-size: 25px;
+        font-family: "Edu AU VIC WA NT Guides", cursive;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      h2,
+      h3,
+      h4 {
+        margin-left: 20px;
+      }
+
+      .destination {
+        background-color: #f5f5f5;
+        padding-top: 20px;
+        margin-top: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .destination h3 {
+        text-align: center;
+        font-size: 30px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #424242;
+      }
+
+      .destination ul img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      p,
+      blockquote {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      header img {
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: #f5f5f5;
+        width: 350px;
+      }
+
+      .destination p {
+        font-family: "Edu AU VIC WA NT Guides", cursive;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      .destination ul {
+        display: flex;
+        justify-content: space-evenly;
+
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .destination ul li {
+        list-style: none;
+      }
+
+      .destination img {
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .selection {
+        background-color: #424242;
+        padding-top: 20px;
+        margin-top: 20px;
+        color: #f5f5f5;
+      }
+
+      .selection h4 {
+        text-align: center;
+        font-size: 30px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #f5f5f5;
+      }
+
+      .selection div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .selection p {
+        font-size: 20px;
+        font-style: normal;
+        color: #f5f5f5;
+      }
+
+      select {
+        margin-left: 20px;
+        padding: 5px;
+        background-color: #eaeaea;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 20%;
+        height: 40px;
+        font-size: 20px;
+        font-family: "Edu AU VIC WA NT Guides", cursive;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      blockquote {
+        margin-left: 20px;
+        padding: 10px;
+        font-style: italic;
+        background-color: #f9f9f9;
+        color: #424242;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 30px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      hr {
+        border: 0;
+        height: 2px;
+        background-color: #424242;
+      }
+
+      .hobbies {
+        background-color: #424242;
+        padding: 20px 0;
+        margin-top: 20px;
+        color: #f5f5f5;
+      }
+
+      .hobbies h3 {
+        text-align: center;
+        font-size: 30px;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #f5f5f5;
+      }
+
+      table {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        font-size: 20px;
+      }
+
+      th {
+        background-color: #48cfcb;
+        color: #424242;
+      }
+
+      .table-font {
+        font-family: "Edu AU VIC WA NT Guides", cursive;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      footer {
+        background-color: #f5f5f5;
+        padding: 5px;
+        margin: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      a {
+        color: #229799;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      @media (max-width: 920px) {
+        .destination ul {
+          flex-direction: column;
+          align-items: center;
+        }
+        .destination ul img {
+          width: 400px;
+          height: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to My Next Travel Adventure</h1>
+
+    <header>
+      <h2>Discovering New Places</h2>
+      <p>
+        Traveling opens my heart, broadens my mind, and fills the life with
+        stories to tell. Ready to pack your bags?
+      </p>
+
+      <center>
+        <img src="images/Harsh.png" alt="Profile of ChatGPT" width="200px" />
+      </center>
+    </header>
+
+    <section class="destination">
+      <h3>Destinations Explored</h3>
+      <ul>
+        <li>
+          <img src="images/arch.png" alt="" />
+          <p>Saint Louis - Arch</p>
+        </li>
+        <li>
+          <img src="images/london.png" alt="" />
+          <p>London - Big Ben</p>
+        </li>
+        <li>
+          <img src="images/edinburgh.png" alt="" />
+          <p>Edinburgh - Scotland</p>
+        </li>
+        <li>
+          <img src="images/new-york.png" alt="" />
+          <p>New York - Liberty</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="selection">
+      <h4>Where would you like to travel next?</h4>
+      <div>
+        <p>Choose a destination below:</p>
+        <select>
+          <option value="paris">Paris</option>
+          <option value="istanbul">Istanbul</option>
+          <option value="dubai">Dubai</option>
+          <option value="turkey">Turkey</option>
+        </select>
+      </div>
+    </section>
+
+    <br />
+    <hr />
+    <br />
+
+    <blockquote>
+      "All journeys have secret destinations | Life is about the adventures you
+      take and the memories you make"
+    </blockquote>
+
+    <br />
+    <hr />
+
+    <section class="hobbies">
+      <h3>My Hobbies When I'm Not Traveling</h3>
+      <table>
+        <tr>
+          <th>Hobby</th>
+          <th>Last Done</th>
+        </tr>
+        <tr>
+          <td>Reading Books</td>
+          <td class="table-font">Yesterday</td>
+        </tr>
+        <tr>
+          <td>Watching Movies</td>
+          <td class="table-font">Once a while</td>
+        </tr>
+        <tr>
+          <td>Photography</td>
+          <td class="table-font">Last Month</td>
+        </tr>
+      </table>
+    </section>
+
+    <footer>
+      <p>
+        Visit
+        <a href="https://parisjetaime.com/eng/" target="_blank">Paris</a>
+        for more travel information about Paris
+      </p>
+      <p>
+        <a href="https://www.nationalgeographic.com" target="_self"
+          >National Geographic</a
+        >
+        website for amazing travel photography.
+      </p>
+    </footer>
+  </body>
+</html>
